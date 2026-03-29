@@ -4,9 +4,14 @@ version = "0.1.0"
 description = "Build123d library for gridfinity objects"
 dependencies = [
     "build123d>=0.10.0",
-    "bd_warehouse@git+https://github.com/gumyr/bd_warehouse@48c507baac94231e2eb2c4032848719660f964dc",
+    "makerrepo-cli; python_version >= '3.11'",
 ]
-requires-python = ">=3.8"
+requires-python = ">=3.10,<3.13"
+
+[project.optional-dependencies]
+makerrepo = [
+    "makerrepo>=0.5.2; python_version >= '3.11'",
+]
 
 [build-system]
 requires = ["setuptools >= 61.0.0"]
@@ -41,6 +46,7 @@ ignore = ["ANN101", "PLR0913", "ANN204", "S603"]
     "PT027",
 ]
 "**/docs/*" = ["D100", "D101", "D102", "INP001"]
+"mr_exports/*" = ["D100", "D101", "D102", "INP001"]
 
 [tool.ruff.lint.pydocstyle]
 convention = "google"

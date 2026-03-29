@@ -27,7 +27,6 @@ from gridfinity_build123d import (
     GridfinityRefinedMagnetHolePressfit,
     GridfinityRefinedMagnetHoleSide,
     GridfinityRefinedScrewHole,
-    GridfinityRefinedThreadedScrewHole,
     HoleFeature,
     Label,
     MagnetHole,
@@ -416,13 +415,13 @@ Convert.parts_to_gif(
             features=[
                 ScrewHole(BottomCorners()),
                 MagnetHole(BottomCorners()),
-                GridfinityRefinedThreadedScrewHole(BottomMiddle()),
+                GridfinityRefinedScrewHole(BottomMiddle()),
             ],
         ),
         BaseEqual(
             features=[
                 GridfinityRefinedMagnetHoleSide(BottomCorners()),
-                GridfinityRefinedThreadedScrewHole(BottomMiddle()),
+                GridfinityRefinedScrewHole(BottomMiddle()),
             ],
         ),
     ],

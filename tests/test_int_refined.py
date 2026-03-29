@@ -14,7 +14,6 @@ from gridfinity_build123d import (
     GridfinityRefinedMagnetHolePressfit,
     GridfinityRefinedMagnetHoleSide,
     GridfinityRefinedScrewHole,
-    GridfinityRefinedThreadedScrewHole,
 )
 
 
@@ -44,7 +43,7 @@ class RefinedBinTest(testutils.UtilTestCase):
         part = Bin(
             BaseEqual(
                 features=[
-                    GridfinityRefinedThreadedScrewHole(BottomMiddle()),
+                    GridfinityRefinedScrewHole(BottomMiddle()),
                     GridfinityRefinedMagnetHoleSide(BottomCorners()),
                 ],
             ),
