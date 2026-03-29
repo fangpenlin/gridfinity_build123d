@@ -1,2 +1,7 @@
 pythonpaths:
   - src
+
+artifacts:
+  default_config:
+    export_step: true
+    export_3mf: false
